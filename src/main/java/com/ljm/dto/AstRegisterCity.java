@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.ToString;
 
 @Data
-@ToString
+@ToString(callSuper = true)
 public class AstRegisterCity extends BaseModel {
 
     private static final long serialVersionUID = 945043344258768330L;

@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.ljm.dto.AstRegisterCity;
 import com.ljm.mapper.RegistryCityMapper;
 import com.ljm.utils.PinYinUtil;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,10 @@ public class RegistryCityService {
 
 
     public void selectRegistryCityInfo(){
-//        AstRegisterCity astRegisterCity = registryCityMapper.selectById("11XX00");
-        Wrapper<AstRegisterCity> condition = new QueryWrapper<>();
+        AstRegisterCity astRegisterCity = registryCityMapper.selectById("11XX00");
+        System.out.println("输出父类一个属性：" + astRegisterCity.getLockVersion());
+        System.out.println("原来的bean:" + astRegisterCity);
+        /*Wrapper<AstRegisterCity> condition = new QueryWrapper<>();
         List<AstRegisterCity> Cities = registryCityMapper.selectList(condition);
         //处理一下数据
         //1.翻译城市
@@ -46,9 +49,8 @@ public class RegistryCityService {
             }
 
             item.setRegProvinceEn(provinceEn);
-            registryCityMapper.updateById(item);
-        });
-
+            //registryCityMapper.updateById(item);
+        });*/
 
     }
 

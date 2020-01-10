@@ -1,0 +1,8 @@
+1.springboot注解开发，添加一个类注解@Ant（类似@service），使得使用该注解的类往spring容器和bean工厂中添加实例。
+#1.定义一个注解 com.ljm.config.annotation.Ant。
+#2.定制一个bean定义注册后处理（BeanDefinitionRegistryPostProcessor），添加一个扫描
+#实例（ClassPathBeanDefinitionScanner）将包含@Ant注解类注册到spirng的bean 工厂中 com.ljm.config.spring.lifecycle.MyBeanDefinitionRegistryPostProcessor
+#3.可以通过@Autowired注解和applicationContext容器，根据类型拿到通过自定义注解添加到容器中的bean实例。
+
+
+
