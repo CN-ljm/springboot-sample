@@ -1,0 +1,5 @@
+#1.将外部jar包做成maven管理jar包
+运行命令：mvn install:install-file -Dfile=F:\jar\ljm-sdk.jar -DgroupId=com.ljm -DartifactId=ljm-sdk -Dversion=1.0.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
+文章出处：https://blog.csdn.net/qq_40644583/article/details/81475135
+
+
